@@ -2,6 +2,11 @@
 
 > A Vue.js project
 
+## Added Vuex to Vue.js project  
+
+> Learned how to add Vuex to Vue.js project. Saw the difference between props state management and Vuex. 
+> Vuex really is the way to go, because it makes all the state management centralized in the store. The code is much more readable, understandidle. Thank Academind for this tutorial. 
+
 ## Build Setup
 
 ``` bash
