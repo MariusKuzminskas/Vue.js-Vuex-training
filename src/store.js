@@ -40,13 +40,13 @@ export const store = new Vuex.Store({
             };
             state.registrations.push(registration);        
         },
-        unregister (state, userId) {
+        unregister (state, payload) {
             const user = state.users.find(user => {
-                return user.id == userId
+                return user.id == payload.userId
             });
             user.registered = false;
             const registration = state.registrations.find(registration => {
-                return registration.userId == userId;
+                return registration.userId == payload.userId;
             });
             state.registrations.splice(state.registrations.indexOf(registration), 1);
                    

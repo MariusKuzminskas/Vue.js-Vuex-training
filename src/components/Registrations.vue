@@ -19,7 +19,7 @@ import { mapGetters } from "vuex";
         
         methods: {
             unregister(registration) {
-                this.$store.comit({
+                this.$store.commit({
                     type: "unregister",
                     userId: registration.userId
                 })
@@ -35,7 +35,7 @@ import { mapGetters } from "vuex";
    
 </script>
 
-<style scoped>f
+<style scoped>
     #registrations {
         box-shadow: 1px 1px 2px 1px #ccc;
         margin: 20px;
