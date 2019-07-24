@@ -26,6 +26,7 @@ export const store = new Vuex.Store({
             return state.registrations.length;
         }
     },
+    // You cant run asyc code in mutations , for this we use actions
     mutations: {
         register(state, userId) {
             const date = new Date;
@@ -49,7 +50,14 @@ export const store = new Vuex.Store({
                 return registration.userId == payload.userId;
             });
             state.registrations.splice(state.registrations.indexOf(registration), 1);
-                   
+        }
+    },
+    // this can be async code
+    actions: {
+        register({ commit }, userId) {
+            setTimeout(() => {
+                commit('register', userId)
+            }, 1000);
         }
     }
 });
